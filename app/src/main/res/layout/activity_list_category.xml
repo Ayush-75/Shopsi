@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listCategoryVM" type="com.ayushsapplication.app.modules.listcategory.data.viewmodel.ListCategoryVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArrowLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCategory"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{listCategoryVM.listCategoryModel.txtCategory}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_category"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearListCategory"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText}"
+                        style="@style/txtPoppinsbold12_1" tools:text="@string/lbl_shirt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon1"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_bikini_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_bikini_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText1}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_bikini"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_dress_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_dress_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText2}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_dress"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_man_work_equipment"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_man_work_equipment"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText3"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText3}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_work_equipment"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_man_pants_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_man_pants_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText4}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_man_pants"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon5"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_man_shoes_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_man_shoes_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText5}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_man_shoes"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon6"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_man_underwear_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_man_underwear_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText6}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_man_underwear"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini7"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon7"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_man_t_shirt_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_man_t_shirt_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText7"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText7}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_man_t_shirt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini8"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon8"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_woman_bag_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_woman_bag_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText8"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText8}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_woman_bag"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini9"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon9"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_woman_pants_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_woman_pants_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText9"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText9}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_woman_pants"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearCategoryOptionBikini10"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                    <ImageView android:id="@+id/imageBikiniIcon10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_high_heels_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_high_heels_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBikiniText10"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{listCategoryVM.listCategoryModel.txtBikiniText10}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_high_heels"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

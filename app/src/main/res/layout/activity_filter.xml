@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="filterVM" type="com.ayushsapplication.app.modules.filter.data.viewmodel.FilterVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPrice"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_7pxv"
+        android:paddingTop="@dimen/_7pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageCloseIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close_icon"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFilterSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{filterVM.filterModel.txtFilterSearch}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_filter_search"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFilter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceRange"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{filterVM.filterModel.txtPriceRange}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_price_range"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearPriceRow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <EditText
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:hint="@string/lbl_1_245"
+                        android:id="@+id/etPrice"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:paddingBottom="@dimen/_15pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_15pxv"
+                        android:singleLine="true"
+                        android:text="@={filterVM.filterModel.etPriceValue}"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_12pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:hint="@string/lbl_9_344"
+                        android:id="@+id/etPrice1"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:paddingBottom="@dimen/_15pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_15pxv"
+                        android:singleLine="true"
+                        android:text="@={filterVM.filterModel.etPrice1Value}"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_12pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCondition"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{filterVM.filterModel.txtCondition}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_condition"/>
+                <FrameLayout android:id="@+id/frameConditionChipView"
+                    android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameNew"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                        android:id="@+id/frameUsedSelected"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                        android:id="@+id/frameNotSpecified"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBuyingFormat"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{filterVM.filterModel.txtBuyingFormat}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_buying_format"/>
+                <FrameLayout android:id="@+id/frameBuyingFormatChipView"
+                    android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameAllListings"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                        android:id="@+id/frameAcceptsOffers"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameAuction"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameBuyItNow"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameClassifiedAds"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtItemLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{filterVM.filterModel.txtItemLocation}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_item_location"/>
+                <FrameLayout android:id="@+id/frameItemLocationChipView"
+                    android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameUSOnly"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                        android:id="@+id/frameNorthAmerica"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameEurope"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:id="@+id/frameAsia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearShowOnlyColumn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtShowOnly"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{filterVM.filterModel.txtShowOnly}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_show_only"/>
+                    <FrameLayout android:id="@+id/frameShowOnly"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameFreeReturns"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                            android:id="@+id/frameReturnsAccepted"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameAuthorizedSeller"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameCompletedItems"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                            android:id="@+id/frameSoldItemsSelected"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameDealsSavings"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameSaleItems"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameListedAsLots"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_opacity_0_1_radius_5"
+                            android:id="@+id/frameSearchInDescription"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameBenefitsCharity"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                            android:id="@+id/frameAuthenticityVerified"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="@dimen/_16pxh" android:paddingVertical="@dimen/_16pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnApplyButton"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_apply" android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_apply"/>
+    </LinearLayout>
+</layout>
