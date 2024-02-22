@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewProductVM" type="com.ayushsapplication.app.modules.reviewproduct.data.viewmodel.ReviewProductVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearWriteReview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_9pxv"
+        android:paddingTop="@dimen/_9pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtReviewCounter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{reviewProductVM.reviewProductModel.txtReviewCounter}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_5_review2"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearReviewProduct"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_19pxh" android:paddingStart="@dimen/_19pxh">
+                <LinearLayout android:id="@+id/linearProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_picture}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearJamesLawson"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJamesLawson"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{reviewProductVM.reviewProductModel.txtJamesLawson}"
+                            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_james_lawson"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                            android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{reviewProductVM.reviewProductModel.txtDescription}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_air_max_are_always"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtMonth}"
+                    style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_2016"/>
+                <LinearLayout android:id="@+id/linearProfile1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture1"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_picture_48x48}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture_48x48"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearLauraOctavian"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLauraOctavian"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{reviewProductVM.reviewProductModel.txtLauraOctavian}"
+                            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_laura_octavian"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                            android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtThisIsReallyAmazing"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{reviewProductVM.reviewProductModel.txtThisIsReallyAmazing}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_this_is_really_amazing"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtMonth1}"
+                    style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_2016"/>
+                <LinearLayout android:id="@+id/linearProfile2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_picture_1}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture_1"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearJhonsonBridge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJhonsonBridge"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{reviewProductVM.reviewProductModel.txtJhonsonBridge}"
+                            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_jhonson_bridge"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                            android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtDescription1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{reviewProductVM.reviewProductModel.txtDescription1}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_air_max_are_always2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtMonth2}"
+                    style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_2016"/>
+                <LinearLayout android:id="@+id/linearProfile3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture3"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_picture_48x48}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture_48x48"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearLauraOctavian1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLauraOctavian1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{reviewProductVM.reviewProductModel.txtLauraOctavian1}"
+                            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_laura_octavian"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                            android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtThisIsReallyAmazing1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{reviewProductVM.reviewProductModel.txtThisIsReallyAmazing1}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_this_is_really_amazing"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtMonth3}"
+                    style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_2016"/>
+                <LinearLayout android:id="@+id/linearProfile4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_picture_1}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture_1"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearJhonsonBridge1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJhonsonBridge1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{reviewProductVM.reviewProductModel.txtJhonsonBridge1}"
+                            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_jhonson_bridge"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                            android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtDescription2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{reviewProductVM.reviewProductModel.txtDescription2}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_air_max_are_always2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtMonth4}"
+                    style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_2016"/>
+            </LinearLayout>
+        </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnWriteReview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_write_review"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_write_review"/>
+    </LinearLayout>
+</layout>

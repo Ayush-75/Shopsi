@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="superFlashSaleVM" type="com.ayushsapplication.app.modules.superflashsale.data.viewmodel.SuperFlashSaleVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArrowLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuperFlashSale"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{superFlashSaleVM.superFlashSaleModel.txtSuperFlashSale}"
+                style="@style/txtPoppinsbold16" tools:text="@string/msg_super_flash_sale"/>
+            <ImageView android:id="@+id/imageSearchIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_nav_explore"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_nav_explore"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearSuperFlashSale"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                <FrameLayout android:id="@+id/frameOfferBanner"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_206pxv" android:layout_width="@dimen/_343pxh">
+                    <ImageView android:id="@+id/imagePromotionImage"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_206pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_5pxh}"
+                        imageRes="@{@drawable/img_promotion_image}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_promotion_image"/>
+                    <LinearLayout android:id="@+id/linearOffer"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/txtOffer"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:text="@{superFlashSaleVM.superFlashSaleModel.txtOffer}"
+                            style="@style/txtPoppinsbold24" tools:text="@string/msg_super_flash_sale_50"/>
+                        <LinearLayout
+                            android:id="@+id/linearPromotionPriod"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtClock"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.03"
+                                android:paddingBottom="@dimen/_8pxv"
+                                android:paddingEnd="@dimen/_9pxh"
+                                android:paddingStart="@dimen/_9pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@{superFlashSaleVM.superFlashSaleModel.txtClock}"
+                                style="@style/txtSolidRounded" tools:text="@string/lbl_08"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtText"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.0"
+                                android:singleLine="true"
+                                android:text="@{superFlashSaleVM.superFlashSaleModel.txtText}"
+                                style="@style/txtPoppinsbold14" tools:text="@string/lbl"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtMinutes"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.03"
+                                android:paddingBottom="@dimen/_8pxv"
+                                android:paddingEnd="@dimen/_9pxh"
+                                android:paddingStart="@dimen/_9pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@{superFlashSaleVM.superFlashSaleModel.txtMinutes}"
+                                style="@style/txtSolidRounded" tools:text="@string/lbl_34"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtText1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.0"
+                                android:singleLine="true"
+                                android:text="@{superFlashSaleVM.superFlashSaleModel.txtText1}"
+                                style="@style/txtPoppinsbold14" tools:text="@string/lbl"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSecounds"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.03"
+                                android:paddingBottom="@dimen/_8pxv"
+                                android:paddingEnd="@dimen/_10pxh"
+                                android:paddingStart="@dimen/_10pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@{superFlashSaleVM.superFlashSaleModel.txtSecounds}"
+                                style="@style/txtSolidRounded" tools:text="@string/lbl_52"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerSuperFlashSale"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_13pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_superflashsale"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>
